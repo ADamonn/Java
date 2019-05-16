@@ -9,6 +9,12 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Hemsire {
-    
+public class Hemsire extends Kullanci{
+
+    String name, title;
+    int age, id;
+    public Hemsire(String name, String title, int age, int id){
+        super (title, name, age, id);
+        
+    }
 }

@@ -16,6 +16,6 @@ public class Doktor extends Kullanci {
     
     public Doktor(String name, String title, int id, int age) {
         super(name, title, id, age);
-        System.out.println("G");
+        
     }
 }

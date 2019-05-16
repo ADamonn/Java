@@ -10,5 +10,7 @@ package ilactakipsystem;
  * @author Toshiba
  */
 public class Ilac {
-    
+    int i;
+    int b;
+    int v;
 }

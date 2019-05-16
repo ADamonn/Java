@@ -10,5 +10,9 @@ package ilactakipsystem;
  * @author Toshiba
  */
 public class eczane {
+    String location, name, date;
+    int storage;
+    Ilac Ilac;
+    Doktor Doktor;
     
 }

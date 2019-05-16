@@ -9,6 +9,14 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Hasta {
-    
+public class Hasta extends Kullanci {
+
+    String name, title, illness;
+    int id, age;
+
+    public Hasta(String name, String title, String illness, int id, int age) {
+        super(name, title, id, age);
+        this.illness = illness;
+        
+    }
 }
