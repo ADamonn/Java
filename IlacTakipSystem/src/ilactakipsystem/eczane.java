@@ -5,6 +5,8 @@
  */
 package ilactakipsystem;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Toshiba
@@ -12,7 +14,7 @@ package ilactakipsystem;
 public class eczane {
     String location, name, date;
     int storage;
-    Ilac Ilac;
     Doktor Doktor;
+    ArrayList<Ilac> ilce=new ArrayList<>();
     
 }

@@ -17,6 +17,5 @@ public class Kullanci {
   this.title= title;
   this.id= id;
   this.age= age;
-  
   }
 }
