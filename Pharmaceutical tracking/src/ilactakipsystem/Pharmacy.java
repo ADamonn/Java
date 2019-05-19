@@ -31,7 +31,7 @@ public class Pharmacy implements Transactions {
     ArrayList<Medicine> medicines = new ArrayList<>();
 
     @Override
-    public void ilaceEkle(Medicine medicine) {
+    public void addmedicine(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
             if (medicines.get(i).getSeriNumber().equals(medicine.getSeriNumber())) {
@@ -48,7 +48,7 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public void ilaceSatin(Medicine medicine) {
+    public void medicinesale(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
             if (medicines.get(i).getSeriNumber().equals(medicine.getSeriNumber())) {
@@ -77,13 +77,13 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public void ilacSiralama(ArrayList<Medicine> arrayList) {
+    public void medicinesort(ArrayList<Medicine> arrayList) {
         Medicine arrayMedicine[] = (Medicine[]) arrayList.toArray();
         bubbleSort(arrayMedicine);
     }
 
     @Override
-    public void ilacArama(Medicine medicine) {
+    public void medicinesearch(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
             if (medicines.get(i) == medicine) {
@@ -99,7 +99,7 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public void ilacArama(String SeriNumber) {
+    public void medicinesearch(String SeriNumber) {
         Medicine medicine = null;
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
@@ -116,7 +116,7 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public void ilacSillme(Medicine medicine) {
+    public void medicineremove(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
             if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
@@ -131,7 +131,7 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public int ilacesayisi(Medicine medicine) {
+    public int medicinecounter(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
             if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {

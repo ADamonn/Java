@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author ajohanson
  */
 public interface Transactions {
-    public void ilaceEkle(Medicine ilac);
-    public void ilaceSatin(Medicine ilec);
-    public void ilacSiralama(ArrayList<Medicine> arrayList);
-    public void ilacArama (Medicine ilac);
-    public void ilacArama (String SeriNumber);
-    public void ilacSillme (Medicine ilac);
-    public int ilacesayisi (Medicine ilac);
+    public void addmedicine(Medicine ilac);
+    public void medicinesale(Medicine ilec);
+    public void medicinesort(ArrayList<Medicine> arrayList);
+    public void medicinesearch (Medicine ilac);
+    public void medicinesearch (String SeriNumber);
+    public void medicineremove (Medicine ilac);
+    public int medicinecounter (Medicine ilac);
    
 }
