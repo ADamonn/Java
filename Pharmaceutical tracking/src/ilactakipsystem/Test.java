@@ -5,6 +5,8 @@
  */
 package ilactakipsystem;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Toshiba
@@ -31,18 +33,11 @@ public class Test {
         pharmacy.addmedicine(medicine3);
         pharmacy.addmedicine(medicine4);
         pharmacy.addmedicine(medicine5);
-         
-         
-    
         
+        boolean exit = true;
+        Scanner input = new Scanner (System.in);
+        Medicine medicine =new Medicine();
         
-        
-        
-        
-        
-        
-        
-        
-      
+                
     }
 }

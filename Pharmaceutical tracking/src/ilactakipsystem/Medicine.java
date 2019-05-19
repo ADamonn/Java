@@ -17,6 +17,9 @@ public class Medicine {
 
     private boolean cencorship;
 
+    public Medicine() {
+    }
+    
     public Medicine(String SeriNumber, String info, int refill, int expireydate, int Counter, boolean cencorship) {
         this.SeriNumber = SeriNumber;
         this.info = info;
