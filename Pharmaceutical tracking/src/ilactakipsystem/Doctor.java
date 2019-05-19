@@ -9,14 +9,13 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Hasta extends Kullanci {
+public class Doctor extends User {
 
-    String name, title, illness;
+    String name, title;
     int id, age;
-
-    public Hasta(String name, String title, String illness, int id, int age) {
+    
+    public Doctor(String name, String title, int id, int age) {
         super(name, title, id, age);
-        this.illness = illness;
         
     }
 }

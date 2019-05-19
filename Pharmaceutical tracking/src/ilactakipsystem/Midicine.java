@@ -9,7 +9,7 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Ilac {
+public class Midicine {
 
     private String SeriNumber, info;
     private int refill, expireydate, age;
