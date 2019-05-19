@@ -83,7 +83,7 @@ public class Medicine {
 
     @Override
     public String toString() {
-        String function = "SeriNumber:" + this.SeriNumber + "    info:" + this.info + "    refill:"  + this.refill + "   expireydate:" + this.expireydate + "   age:" + this.cencorship;
+        String function = "SeriNumber:" + this.SeriNumber + "    info:" + this.info + "    refill:"  + this.refill + "   expireydate:" + this.expireydate + "   cencorship:" + this.cencorship;
         return function;
 
     }
