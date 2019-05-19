@@ -46,7 +46,7 @@ public class Pharmacy implements Transactions {
             }
         }
         if (found == false) {
-            medicine.setCaunter(medicine.getCaunter() - 1);
+            medicine.setCounter(medicine.getCounter() - 1);
         }
     }
 
