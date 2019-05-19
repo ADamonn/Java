@@ -5,6 +5,8 @@
  */
 package ilactakipsystem;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Toshiba
@@ -26,6 +28,16 @@ public class Test {
 //    (String location, String name, int storage, Doctor doktor, Assistant assistant, Patient patient) {
 
         Pharmacy pharmacy = new Pharmacy("gaziosmanpasa", "AliNizemEcsanisi", 10000, doctor, assistant, Patient);
+        pharmacy.addmedicine(medicine1);
+        pharmacy.addmedicine(medicine2);
+        pharmacy.addmedicine(medicine3);
+        pharmacy.addmedicine(medicine4);
+        pharmacy.addmedicine(medicine5);
+        
+        boolean exit = true;
+        Scanner input = new Scanner (System.in);
+        Medicine medicine =new Medicine();
+        
+                
     }
-
 }
