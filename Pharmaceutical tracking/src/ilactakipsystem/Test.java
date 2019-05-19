@@ -26,6 +26,23 @@ public class Test {
 //    (String location, String name, int storage, Doctor doktor, Assistant assistant, Patient patient) {
 
         Pharmacy pharmacy = new Pharmacy("gaziosmanpasa", "AliNizemEcsanisi", 10000, doctor, assistant, Patient);
+        pharmacy.ilaceEkle(medicine1);
+        pharmacy.ilaceEkle(medicine2);
+        pharmacy.ilaceEkle(medicine3);
+        pharmacy.ilaceEkle(medicine4);
+        pharmacy.ilaceEkle(medicine5);
+         boolean exit = true;
+         
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
     }
-
 }
