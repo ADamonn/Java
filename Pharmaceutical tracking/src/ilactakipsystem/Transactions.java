@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public interface Transactions {
     public void ilaceEkle(Medicine ilac);
     public void ilaceSatin(Medicine ilec);
-    public void ilacSiralama(ArrayList arrayList);
+    public void ilacSiralama(ArrayList<Medicine> arrayList);
     public void ilacArama (Medicine ilac);
     public void ilacArama (String SeriNumber);
     public void ilacSillme (Medicine ilac);

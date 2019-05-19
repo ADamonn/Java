@@ -50,13 +50,13 @@ public class Pharmacy implements Transactions {
         }
     }
 
-    private void bubbleSort(int arr[]) {
+    private void bubbleSort(Medicine arr[]) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
+                if (arr[j].getexpireydate() > arr[j + 1].getexpireydate()) {
                     // swap arr[j+1] and arr[i] 
-                    int temp = arr[j];
+                    Medicine temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
@@ -66,28 +66,68 @@ public class Pharmacy implements Transactions {
 
     @Override
     public void ilacSiralama(ArrayList<Medicine> arrayList) {
-        Medicine arrayMedicine[]= (Medicine[]) arrayList.toArray();
-        
+        Medicine arrayMedicine[] = (Medicine[]) arrayList.toArray();
+        bubbleSort(arrayMedicine);
     }
 
     @Override
     public void ilacArama(Medicine medicine) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean found = false;
+        for (int i = 0; i < medicines.size(); i++) {
+            if (medicines.get(i) == medicine) {
+                found = true;
+            } else {
+                found = false;
+            }
+        }
+        if (found) {
+            System.out.println("the Medicine has been founded");
+            System.out.println(medicine.toString());
+        }
     }
 
     @Override
     public void ilacArama(String SeriNumber) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Medicine medicine = null;
+        boolean found = false;
+        for (int i = 0; i < medicines.size(); i++) {
+            if (medicines.get(i).getSeriNumber().equals(SeriNumber)) {
+                medicine = medicines.get(i);
+                found = true;
+            } else {
+                found = false;
+            }
+        }
+        if (found) {
+            System.out.println("the Medicine hasbeen founded" + medicine.toString());
+        }
     }
 
     @Override
     public void ilacSillme(Medicine medicine) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean found = false;
+        for (int i = 0; i < medicines.size(); i++) {
+            if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
+                found = true;
+            }
+        }
+
+        if (found) {
+            medicines.remove(medicine);
+            System.out.println("the medicine has been successfully removed");
+        }
     }
 
     @Override
     public int ilacesayisi(Medicine medicine) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean found = false;
+        for (int i = 0; i < medicines.size(); i++) {
+            if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
+                found = true;
+            }
+        }if (found) {
+           return medicine.getCaunter();
+        }
+        return 0;
     }
-
 }

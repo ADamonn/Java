@@ -12,8 +12,16 @@ package ilactakipsystem;
 public class Medicine {
 
     private String SeriNumber, info;
-    private int refill, expireydate, age;
+    private int refill, expireydate, age, caunter;
     private boolean cencorship;
+    public Medicine (int age,boolean cencorship, String SeriNumber,String info,int expireydate,int caunter){};
+    public int getCaunter() {
+        return caunter;
+    }
+
+    public void setCaunter(int caunter) {
+        this.caunter = caunter;
+    }
     public final String tiype[] = {"buccal", "enteral", "inhalable", "infused"};
 
     public String getSeriNumber() {
@@ -66,9 +74,8 @@ public class Medicine {
 
     @Override
     public String toString() {
-        String function ="SeriNumber:" + this.SeriNumber + "info:" + this.info + "refill:" + this.refill + "expireydate:" + this.expireydate + "age:" + this.cencorship;
+        String function = "SeriNumber:" + this.SeriNumber + "info:" + this.info + "refill:" + this.refill + "expireydate:" + this.expireydate + "age:" + this.cencorship;
         return function;
 
     }
-
 }
