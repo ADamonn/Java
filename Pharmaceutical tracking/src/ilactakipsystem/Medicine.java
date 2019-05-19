@@ -17,9 +17,6 @@ public class Medicine {
 
     private boolean cencorship;
 
-    public Medicine() {
-    }
-    
     public Medicine(String SeriNumber, String info, int refill, int expireydate, int Counter, boolean cencorship) {
         this.SeriNumber = SeriNumber;
         this.info = info;
@@ -27,6 +24,10 @@ public class Medicine {
         this.expireydate = expireydate;
         this.Counter = Counter;
         this.cencorship = cencorship;
+    }
+
+    Medicine() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
@@ -37,7 +38,6 @@ public class Medicine {
     public void setCounter(int Caunter) {
         this.Counter = Caunter;
     }
-
 
     public final String tiype[] = {"buccal", "enteral", "inhalable", "infused"};
 

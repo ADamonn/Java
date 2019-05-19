@@ -140,12 +140,9 @@ public class Pharmacy implements Transactions {
         }
         if (found) {
             return medicine.getCounter();
-<<<<<<< HEAD
        }if (found) {
-=======
 
         }if (found) {
->>>>>>> b097ad3df81637689af392daa01d921c4ba1a018
            return medicine.getCounter();
         }
         return 0;
