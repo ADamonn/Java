@@ -9,7 +9,7 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Midicine {
+public class Medicine {
 
     private String SeriNumber, info;
     private int refill, expireydate, age;

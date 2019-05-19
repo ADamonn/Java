@@ -15,15 +15,15 @@ public class Pharmacy implements Transactions{
     String location, name, date;
     int storage;
     Doctor Doktor;
-    ArrayList<Midicine> ilce=new ArrayList<>();
+    ArrayList<Medicine> ilce=new ArrayList<>();
 
     @Override
-    public void ilaceEkle(Midicine ilac) {
+    public void ilaceEkle(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void ilaceSatin(Midicine ilec) {
+    public void ilaceSatin(Medicine ilec) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -33,7 +33,7 @@ public class Pharmacy implements Transactions{
     }
 
     @Override
-    public void ilacArama(Midicine ilac) {
+    public void ilacArama(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -43,12 +43,12 @@ public class Pharmacy implements Transactions{
     }
 
     @Override
-    public void ilacSillme(Midicine ilac) {
+    public void ilacSillme(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int ilacesayisi(Midicine ilac) {
+    public int ilacesayisi(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
