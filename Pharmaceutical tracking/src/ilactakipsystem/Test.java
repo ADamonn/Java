@@ -33,108 +33,105 @@ public class Test {
         pharmacy.addmedicine(medicine3);
         pharmacy.addmedicine(medicine4);
         pharmacy.addmedicine(medicine5);
+        int size = pharmacy.medicines.size();System.out.println("ljthtnotnon onr outbno wnoi bno  "+size);
         boolean ext = true;
         int count = 1;
         Scanner input = new Scanner(System.in);
-        Medicine medicine =new Medicine();
-        System.out.print("Adınızı Giriniz : ");
-        k1.setAdi(input.next());
-        System.out.print("Soyadınızı Giriniz : ");
-        k1.setSoyadi(input.next());
-        System.out.print("Adresinizi Giriniz : ");
-        k1.setAdres(input.next());
-        System.out.print("Telinizi Giriniz : ");
-        k1.setTelNo(input.next());
         int asd;
+        Medicine medicine = new Medicine();
+
         while (ext) {
+
             System.out.println();
             System.out.println("---------------------------------------------------------");
-            System.out.println(" Kişisel bilgilerinizi Düzenlemek için 1, \n Şikayet İçin 2, \n Tüm Şikayetlerini Görmek İçin 3,  \n Tüm Şikayet Sayısı için 4 \n Programdan Çıkmak için 5");
+            System.out.println(
+                    "       creat new Medicine ==> 0"
+                    + "\n   Add Medicine ==>  1"
+                    + " \n  Medicine Sale ==> 2 "
+                    + "\n   Medicine sort ==> 3"
+                    + "  \n Medicine Search ==> 4"
+                    + " \n  Medicine Removen ==> 5 "
+                    + "\n   Medicinecounter == > 6 "
+                    + "\n   Medicines show == >  7");
             System.out.println();
-            System.out.println("yazıp 'Enter'a basınız...");
+            System.out.println(" write and Press 'Enter'...");
             System.out.println("---------------------------------------------------------");
-            System.out.print("Seçenek Numarasını Giriniz : ");
+            System.out.print("chose the Number  : ");
             asd = input.nextInt();
             System.out.println();
-            if (asd == 1) {
-                System.out.println("Neyi Düzenlemek İstersiniz? ");
-                System.out.println(" Adınızı düzenlemek için 1, \n Soyadınızı düzenlemek için 2, \n Adresinizi düzenlemek için 3, \n Tel. No'nuzu düzenlemek için 4");
+            if (asd == 0) {
                 System.out.println();
-                System.out.println("yazıp 'Enter'a basınız...");
+                System.out.print("enter the serilnumber: ");
+                medicine.setSeriNumber(input.next());
+                System.out.print("Enter the info: ");
+                medicine.setinfo(input.next());
+                System.out.print("Enter the counter: ");
+                medicine.setCounter(input.nextInt());
+                System.out.print("Enter the Expireyeday : ");
+                medicine.setexpireydate(input.nextInt());
+
+                System.out.println("Enter the refill :");
+                medicine.setrefill(input.nextInt());
+                medicine.setcencorship(true);
+
                 System.out.println("---------------------------------------------------------");
-                System.out.print("Seçenek Numarasını Giriniz: ");
+                //   pharmacy.addmedicine(medicine);
+                System.out.print("chose the Number: ");
+
+            } else if (asd == 1) {
+                System.out.println();
+                System.out.println("for adding plz  press Enter ..");
+                System.out.println("---------------------------------------------------------");
+                pharmacy.addmedicine(medicine);
+                System.out.print("chose the Number: ");
                 asd = input.nextInt();
-                if (asd == 1) {
-                    System.out.print("Adınızı düzenleyiniz: ");
-                    k1.setAdi(input.next());
-                    System.out.println("İsminiz düzenlendi ----> " + k1.getAdi());
-//                  System.out.println("Yeni Adınız: " + ""+k1.adi+"");
-                } else if (asd == 2) {
-                    System.out.print("Soyadınızı düzenleyiniz: ");
-                    k1.setSoyadi(input.next());
-                    System.out.println("Soyadınız düzenlendi ----> " + k1.getSoyadi());
-
-                } else if (asd == 3) {
-                    System.out.print("Adresinizi düzenleyiniz: ");
-                    k1.setAdres(input.next());
-                    System.out.println("Adresiniz düzenlendi ----> " + k1.getAdres());
-
-                } else if (asd == 4) {
-                    System.out.print("Tel.No'nuzu düzenleyiniz: ");
-                    k1.setTelNo(input.next());
-                    System.out.println("Tel. No.'nuz düzenlendi ----> " + k1.getTelNo());
-                    System.out.println("Yeni Tel No.'nuz: " + k1.getTelNo());
-                }
-
-            } else if (asd == 4) {
-
-                getToplamSikayetSayisi();
-                
             } else if (asd == 2) {
-
-                System.out.println("Şikayet Edilecek firma bilgilerini giriniz. \n");
-                Sirket sirket = new Sirket();
-                System.out.print("Firma Adı : ");
-                sirket.setSirketAdi(input.next());
-                System.out.print("Firma Sektörü : ");
-                sirket.setSektor(input.next());
-
-                System.out.print("Şikayet Bilgileri giriniz : \n\n");
-
-                System.out.print("Şikayet Konusu : ");
-                String konu = input.next();
-                System.out.print("Şikayet Açıklama : ");
-                String aciklama = input.next();
-
-                Sikayet sikayet = new Sikayet(k1, sirket, konu, aciklama, count);
-
-                sikayet.geriBildirimdeBulun(sikayet);
+                System.out.print("Medicine  Sale: ");
+                pharmacy.medicinesale(medicine);
+                System.out.println("");
+                System.out.print("chose the Number: ");
+                asd = input.nextInt();
 
             } else if (asd == 3) {
-
-                for (int i = 0; i < db.size(); i++) {
-                    System.out.println("--------------------------------");
-                    System.out.print("Şikayeti yapılan şirket : ");
-                    System.out.println(((Sikayet) (db.get(i))).getSirket().getSirketAdi());
-                    System.out.print("Şikayeti yapılan şirketin sektörü : ");
-                    System.out.println(((Sikayet) db.get(i)).getSirket().getSektor());
-
-                    System.out.print("Şikayet konusu: ");
-                    System.out.println(((Sikayet) db.get(i)).getSikayetKonusu());
-                    System.out.print("Şikayet açıklaması: ");
-                    System.out.println(((Sikayet) db.get(i)).getSikayetAciklamasi());
-                    System.out.print("Şİkayet takip no: ");
-                    System.out.println(((Sikayet) db.get(i)).getTakipNo() + "");
+                System.out.print("medicine  Sort: ");
+                pharmacy.medicinesort(pharmacy.medicines);
+                for (Medicine medicineler : pharmacy.medicines) {
+                    System.out.println(medicineler.toString());
                 }
+                System.out.print("chose the Number: ");
+                asd = input.nextInt();
 
+            } else if (asd == 4) {
+                System.out.print("medicine search : ");
+                System.out.println("1 for serinumber , 2 for given medicine ");
+                int c = input.nextInt();
+                if (c == 1) {
+                    System.out.println("enter the seri number  :");
+                    pharmacy.medicinesearch(input.next());
+                } else {
+                    pharmacy.medicinesearch(medicine);
+
+                }
+                System.out.println("--------------------------------------");
             } else if (asd == 5) {
-                System.exit(0);
-            } else {
-                System.out.println("1'den 5'e kadar sayı giriniz.");
+                System.out.print("medicine remove : ");
+                pharmacy.medicineremove(medicine);
+                System.out.println();
+            } else if (asd == 6) {
+                System.out.println("which medicine to need to to know his counter :");
+                for (int i = 0; i < pharmacy.medicines.size(); i++) {
+                    System.out.println(i + " : " + medicine.getinfo());
+                }
+                pharmacy.medicinecounter(medicine);
+            } else if (asd == 7) {
+                System.out.println(" Show medicine :");
+                for (Medicine medicineler : pharmacy.medicines) {
+                    System.out.println(medicineler.toString());
+                }
+                System.out.println();
             }
-        }
 
+        }
     }
-                
-    }
+
 }

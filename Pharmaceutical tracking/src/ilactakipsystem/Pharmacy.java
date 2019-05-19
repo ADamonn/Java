@@ -19,7 +19,7 @@ public class Pharmacy implements Transactions {
     User assistant;
     User patient;
 
-    public Pharmacy(String location, String name, int storage,User doktor, User assistant, User patient) {
+    public Pharmacy(String location, String name, int storage, User doktor, User assistant, User patient) {
         this.location = location;
         this.name = name;
         this.storage = storage;
@@ -27,7 +27,7 @@ public class Pharmacy implements Transactions {
         this.assistant = assistant;
         this.patient = patient;
     }
-    
+
     ArrayList<Medicine> medicines = new ArrayList<>();
 
     @Override
@@ -62,15 +62,15 @@ public class Pharmacy implements Transactions {
         }
     }
 
-    private void bubbleSort(Medicine arr[]) {
-        int n = arr.length;
+    private void bubbleSort() {
+        int n =medicines.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j].getexpireydate() > arr[j + 1].getexpireydate()) {
+                if (medicines.get(j).getexpireydate() > medicines.get(j + 1).getexpireydate()) {
                     // swap arr[j+1] and arr[i] 
-                    Medicine temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    Medicine temp = medicines.get(j);
+                    medicines.set(j, medicines.get(j + 1));
+                    medicines.set(j + 1, temp);
                 }
             }
         }
@@ -78,8 +78,7 @@ public class Pharmacy implements Transactions {
 
     @Override
     public void medicinesort(ArrayList<Medicine> arrayList) {
-        Medicine arrayMedicine[] = (Medicine[]) arrayList.toArray();
-        bubbleSort(arrayMedicine);
+        bubbleSort();
     }
 
     @Override
@@ -140,10 +139,12 @@ public class Pharmacy implements Transactions {
         }
         if (found) {
             return medicine.getCounter();
-       }if (found) {
+        }
+        if (found) {
 
-        }if (found) {
-           return medicine.getCounter();
+        }
+        if (found) {
+            return medicine.getCounter();
         }
         return 0;
     }
