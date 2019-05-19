@@ -12,7 +12,26 @@ package ilactakipsystem;
 public class Medicine {
 
     private String SeriNumber, info;
-    private int refill, expireydate, age;
+    private int refill, expireydate, age,Counter;
+
+    public Medicine(String SeriNumber, String info, int refill, int expireydate, int age, int Counter, boolean cencorship) {
+        this.SeriNumber = SeriNumber;
+        this.info = info;
+        this.refill = refill;
+        this.expireydate = expireydate;
+        this.age = age;
+        this.Counter = Counter;
+        this.cencorship = cencorship;
+    }
+
+    
+    public int getCounter() {
+        return Counter;
+    }
+
+    public void setCounter(int Caunter) {
+        this.Counter = Caunter;
+    }
     private boolean cencorship;
     public final String tiype[] = {"buccal", "enteral", "inhalable", "infused"};
 
