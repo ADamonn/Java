@@ -13,9 +13,21 @@ import java.util.ArrayList;
  */
 public class Pharmacy implements Transactions {
 
-    String location, name, date;
+    String location, name;
     int storage;
-    Doctor Doktor;
+    User doktor;
+    User assistant;
+    User patient;
+
+    public Pharmacy(String location, String name, int storage,User doktor, User assistant, User patient) {
+        this.location = location;
+        this.name = name;
+        this.storage = storage;
+        this.doktor = doktor;
+        this.assistant = assistant;
+        this.patient = patient;
+    }
+    
     ArrayList<Medicine> medicines = new ArrayList<>();
 
     @Override
@@ -125,8 +137,9 @@ public class Pharmacy implements Transactions {
             if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
                 found = true;
             }
-        }if (found) {
-           return medicine.getCaunter();
+        }
+        if (found) {
+            return medicine.getCounter();
         }
         return 0;
     }

@@ -9,11 +9,11 @@ package ilactakipsystem;
  *
  * @author Toshiba
  */
-public class Nurse extends User{
+public class Assistant extends User{
 
     String name, title;
     int age, id;
-    public Nurse(String name, String title, int age, int id){
+    public Assistant(String name, String title, int age, int id){
         super (title, name, age, id);
         
     }
