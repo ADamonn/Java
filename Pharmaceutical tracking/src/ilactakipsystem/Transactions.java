@@ -11,13 +11,13 @@ import java.util.ArrayList;
  *
  * @author ajohanson
  */
-public interface islamlar {
-    public void ilaceEkle(Ilac ilac);
-    public void ilaceSatin(Ilac ilec);
+public interface Transactions {
+    public void ilaceEkle(Medicine ilac);
+    public void ilaceSatin(Medicine ilec);
     public void ilacSiralama(ArrayList arrayList);
-    public void ilacArama (Ilac ilac);
+    public void ilacArama (Medicine ilac);
     public void ilacArama (String SeriNumber);
-    public void ilacSillme (Ilac ilac);
-    public int ilacesayisi (Ilac ilac);
+    public void ilacSillme (Medicine ilac);
+    public int ilacesayisi (Medicine ilac);
     
 }

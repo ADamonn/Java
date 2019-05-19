@@ -11,19 +11,19 @@ import java.util.ArrayList;
  *
  * @author Toshiba
  */
-public class eczane implements islamlar{
+public class Pharmacy implements Transactions{
     String location, name, date;
     int storage;
-    Doktor Doktor;
-    ArrayList<Ilac> ilce=new ArrayList<>();
+    Doctor Doktor;
+    ArrayList<Medicine> ilce=new ArrayList<>();
 
     @Override
-    public void ilaceEkle(Ilac ilac) {
+    public void ilaceEkle(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void ilaceSatin(Ilac ilec) {
+    public void ilaceSatin(Medicine ilec) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -33,7 +33,7 @@ public class eczane implements islamlar{
     }
 
     @Override
-    public void ilacArama(Ilac ilac) {
+    public void ilacArama(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -43,12 +43,12 @@ public class eczane implements islamlar{
     }
 
     @Override
-    public void ilacSillme(Ilac ilac) {
+    public void ilacSillme(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public int ilacesayisi(Ilac ilac) {
+    public int ilacesayisi(Medicine ilac) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
