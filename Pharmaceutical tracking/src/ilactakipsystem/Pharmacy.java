@@ -126,7 +126,7 @@ public class Pharmacy implements Transactions {
                 found = true;
             }
         }if (found) {
-           return medicine.getCaunter();
+           return medicine.getCounter();
         }
         return 0;
     }
