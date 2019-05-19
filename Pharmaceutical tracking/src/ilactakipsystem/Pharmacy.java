@@ -137,9 +137,14 @@ public class Pharmacy implements Transactions {
             if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
                 found = true;
             }
+<<<<<<< HEAD
         }
         if (found) {
             return medicine.getCounter();
+=======
+        }if (found) {
+           return medicine.getCounter();
+>>>>>>> e703cb326575391360fa5221b7dc236afbae7d46
         }
         return 0;
     }
