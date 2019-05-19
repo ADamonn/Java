@@ -111,6 +111,8 @@ public class Pharmacy implements Transactions {
         }
         if (found) {
             System.out.println("the Medicine hasbeen founded" + medicine.toString());
+        }else{
+            System.out.println("the Medicine not found ");
         }
     }
 

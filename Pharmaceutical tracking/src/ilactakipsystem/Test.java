@@ -28,12 +28,14 @@ public class Test {
 //    (String location, String name, int storage, Doctor doktor, Assistant assistant, Patient patient) {
 
         Pharmacy pharmacy = new Pharmacy("gaziosmanpasa", "AliNizemEcsanisi", 10000, doctor, assistant, Patient);
-        pharmacy.addmedicine(medicine1);
+        pharmacy.medicines.add(medicine1);
+        //  pharmacy.addmedicine(medicine1);
         pharmacy.addmedicine(medicine2);
         pharmacy.addmedicine(medicine3);
         pharmacy.addmedicine(medicine4);
         pharmacy.addmedicine(medicine5);
-        int size = pharmacy.medicines.size();System.out.println("ljthtnotnon onr outbno wnoi bno  "+size);
+        int size = pharmacy.medicines.size();
+        System.out.println("ljthtnotnon onr outbno wnoi bno  " + size);
         boolean ext = true;
         int count = 1;
         Scanner input = new Scanner(System.in);
@@ -82,15 +84,15 @@ public class Test {
                 System.out.println();
                 System.out.println("for adding plz  press Enter ..");
                 System.out.println("---------------------------------------------------------");
-                pharmacy.addmedicine(medicine);
-                System.out.print("chose the Number: ");
-                asd = input.nextInt();
+                if (medicine.getcencorship() == false) {
+                    System.out.println(" plz fill this medicine be4 adding  ");
+                } else {
+                    pharmacy.addmedicine(medicine);
+                }
             } else if (asd == 2) {
                 System.out.print("Medicine  Sale: ");
                 pharmacy.medicinesale(medicine);
                 System.out.println("");
-                System.out.print("chose the Number: ");
-                asd = input.nextInt();
 
             } else if (asd == 3) {
                 System.out.print("medicine  Sort: ");
@@ -98,8 +100,6 @@ public class Test {
                 for (Medicine medicineler : pharmacy.medicines) {
                     System.out.println(medicineler.toString());
                 }
-                System.out.print("chose the Number: ");
-                asd = input.nextInt();
 
             } else if (asd == 4) {
                 System.out.print("medicine search : ");
@@ -108,6 +108,7 @@ public class Test {
                 if (c == 1) {
                     System.out.println("enter the seri number  :");
                     pharmacy.medicinesearch(input.next());
+
                 } else {
                     pharmacy.medicinesearch(medicine);
 
@@ -115,14 +116,22 @@ public class Test {
                 System.out.println("--------------------------------------");
             } else if (asd == 5) {
                 System.out.print("medicine remove : ");
-                pharmacy.medicineremove(medicine);
+               
+                System.out.println("which medicine to need to remove  :");
+                for (int i = 0; i < pharmacy.medicines.size(); i++) {
+                    System.out.println(i + " : " + pharmacy.medicines.get(i).getinfo());
+                }
+                System.out.println("plz selectde the medicine");
+                pharmacy.medicineremove(pharmacy.medicines.get(input.nextInt()));
+                
                 System.out.println();
             } else if (asd == 6) {
                 System.out.println("which medicine to need to to know his counter :");
                 for (int i = 0; i < pharmacy.medicines.size(); i++) {
-                    System.out.println(i + " : " + medicine.getinfo());
+                    System.out.println(i + " : " + pharmacy.medicines.get(i).getinfo());
                 }
-                pharmacy.medicinecounter(medicine);
+                System.out.println("plz selectde the medicine");
+                System.out.println("the counter is :"+pharmacy.medicinecounter(pharmacy.medicines.get(input.nextInt())));
             } else if (asd == 7) {
                 System.out.println(" Show medicine :");
                 for (Medicine medicineler : pharmacy.medicines) {
