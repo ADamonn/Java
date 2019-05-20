@@ -11,7 +11,7 @@ package ilactakipsystem;
  */
 public class Medicine {
 
-    private String SeriNumber, info;
+    private String serialnumber, info;
 
     private int refill, expireydate, age, Counter;
 
@@ -20,8 +20,8 @@ public class Medicine {
     public Medicine() {
     }
 
-    public Medicine(String SeriNumber, String info, int refill, int expireydate, int Counter, boolean cencorship) {
-        this.SeriNumber = SeriNumber;
+    public Medicine(String serialnumber, String info, int refill, int expireydate, int Counter, boolean cencorship) {
+        this.serialnumber = serialnumber;
         this.info = info;
         this.refill = refill;
         this.expireydate = expireydate;
@@ -41,12 +41,12 @@ public class Medicine {
 
     public final String tiype[] = {"buccal", "enteral", "inhalable", "infused"};
 
-    public String getSeriNumber() {
-        return SeriNumber;
+    public String getserialnumber() {
+        return serialnumber;
     }
 
-    public void setSeriNumber(String SeriNumber) {
-        this.SeriNumber = SeriNumber;
+    public void setserialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
     }
 
     public String getinfo() {
@@ -83,7 +83,7 @@ public class Medicine {
 
     @Override
     public String toString() {
-        String function = "SeriNumber:" + this.SeriNumber + "    info:" + this.info + "    refill:"  + this.refill + "   expireydate:" + this.expireydate + "   cencorship:" + this.cencorship;
+        String function = "serialnumber:" + this.serialnumber + "    info:" + this.info + "    refill:"  + this.refill + "   expireydate:" + this.expireydate + "   cencorship:" + this.cencorship;
         return function;
 
     }

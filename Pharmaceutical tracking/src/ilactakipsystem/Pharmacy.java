@@ -34,8 +34,9 @@ public class Pharmacy implements Transactions {
     public void addmedicine(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
-            if (medicines.get(i).getSeriNumber().equals(medicine.getSeriNumber())) {
+            if (medicines.get(i).getserialnumber().equals(medicine.getserialnumber())) {
                 found = false;
+                break;
             } else {
                 found = true;
             }
@@ -51,19 +52,22 @@ public class Pharmacy implements Transactions {
     public void medicinesale(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
-            if (medicines.get(i).getSeriNumber().equals(medicine.getSeriNumber())) {
+            if (medicines.get(i).getserialnumber().equals(medicine.getserialnumber())) {
                 found = false;
             } else {
                 found = true;
             }
         }
         if (found == false) {
+            System.out.println("the medicine is sold " + medicine.getCounter());
+
             medicine.setCounter(medicine.getCounter() - 1);
+           System.out.println("conutet  " + medicine.getCounter());
         }
     }
 
     private void bubbleSort() {
-        int n =medicines.size();
+        int n = medicines.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (medicines.get(j).getexpireydate() > medicines.get(j + 1).getexpireydate()) {
@@ -98,11 +102,11 @@ public class Pharmacy implements Transactions {
     }
 
     @Override
-    public void medicinesearch(String SeriNumber) {
+    public void medicinesearch(String serialnumber) {
         Medicine medicine = null;
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
-            if (medicines.get(i).getSeriNumber().equals(SeriNumber)) {
+            if (medicines.get(i).getserialnumber().equals(serialnumber)) {
                 medicine = medicines.get(i);
                 found = true;
             } else {
@@ -111,8 +115,9 @@ public class Pharmacy implements Transactions {
         }
         if (found) {
             System.out.println("the Medicine hasbeen founded" + medicine.toString());
-        }else{
+        } else {
             System.out.println("the Medicine not found ");
+//            System.out.println("nerede "+medicine.getinfo()+" , "+medicine.getinfo()+" nerede "+medicine.getinfo()+" yok ya ");
         }
     }
 
@@ -120,7 +125,7 @@ public class Pharmacy implements Transactions {
     public void medicineremove(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
-            if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
+            if (medicine.getserialnumber().equals(medicines.get(i).getserialnumber())) {
                 found = true;
             }
         }
@@ -135,7 +140,7 @@ public class Pharmacy implements Transactions {
     public int medicinecounter(Medicine medicine) {
         boolean found = false;
         for (int i = 0; i < medicines.size(); i++) {
-            if (medicine.getSeriNumber().equals(medicines.get(i).getSeriNumber())) {
+            if (medicine.getserialnumber().equals(medicines.get(i).getserialnumber())) {
                 found = true;
             }
         }
